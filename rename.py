@@ -9,10 +9,8 @@ requests.packages.urllib3.util.ssl_.DEFAULT_CIPHERS = 'ALL'
 
 # 配置信息
 # 操作的百度云目录
-dir = '/IT四叶草铺/无密/2022/00. Web3.0/01. 开课吧-Web3.0应用工程师培养计划 (2022)【完结】'
+dir = '/IT四叶草铺/无密/2022/04.后端开发/02. 爬虫技术/路飞-爬虫开发+APP逆向超级大神班'
 
-# 是否urlencode都可以
-# dir = '/六级真题/2018年12月CET6/第二套'
 
 # BDTOKEN可在请求的params中找到
 BDTOKEN = '4af7a376b2088977389cd0c153b5a96c'
@@ -93,7 +91,7 @@ def baiduyun_rename(rename_list):
         if errno == 0:
             print('[info] : rename successfully!')
         elif errno == 12:
-            print('[warning]: 批量处理错误，5s后重试')
+            print('[warning]:批量处理错误，5s后重试 - 总数量:{}'.format(len(rename_list)))
             try_count += 1
             if try_count <= try_max:
                 time.sleep(5)
